@@ -5,11 +5,21 @@ import {
   InMemoryCache,
   ApolloProvider,
 } from '@apollo/client';
+import { relayStylePagination } from '@apollo/client/utilities';
 import App from './App';
+import './assets/styles/_index.scss';
 
 const client = new ApolloClient({
   uri: 'https://swapi-graphql.netlify.app/.netlify/functions/index',
-  cache: new InMemoryCache(),
+  cache: new InMemoryCache({
+    typePolicies: {
+      Query: {
+        fields: {
+          allPeople: relayStylePagination(),
+        },
+      },
+    },
+  }),
 });
 
 ReactDOM.render(
