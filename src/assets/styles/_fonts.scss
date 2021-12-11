@@ -1,0 +1,51 @@
+
+@font-face {
+  font-family: 'sf-pro-display-black-italic';
+  src: url('../fonts/SFPRODISPLAYBLACKITALIC.ttf');
+}
+
+@font-face {
+  font-family: 'sf-pro-display-bold';
+  src: url('../fonts/SFPRODISPLAYBOLD.ttf');
+}
+
+@font-face {
+  font-family: 'sf-pro-display-heavy-italic';
+  src: url('../fonts/SFPRODISPLAYHEAVYITALIC.ttf');
+}
+
+@font-face {
+  font-family: 'sf-pro-display-light-italic';
+  src: url('../fonts/SFPRODISPLAYLIGHTITALIC.ttf');
+}
+
+@font-face {
+  font-family: 'sf-pro-display-medium';
+  src: url('../fonts/SFPRODISPLAYMEDIUM.ttf');
+}
+
+@font-face {
+  font-family: 'sf-pro-display-regular';
+  src: url('../fonts/SFPRODISPLAYREGULAR.ttf');
+}
+
+@font-face {
+  font-family: 'sf-pro-display-semi-bold-italic';
+  src: url('../fonts/SFPRODISPLAYSEMIBOLDITALIC.ttf');
+}
+
+@font-face {
+  font-family: 'sf-pro-display-thin-italic';
+  src: url('../fonts/SFPRODISPLAYTHINITALIC.ttf');
+}
+
+@font-face {
+  font-family: 'sf-pro-display-ultra-light-italic';
+  src: url('../fonts/SFPRODISPLAYULTRALIGHTITALIC.ttf');
+}
+
+@mixin customFont ($font, $fontsize) {
+    font-family: $font;
+    font-size: $fontsize;
+  }
+  

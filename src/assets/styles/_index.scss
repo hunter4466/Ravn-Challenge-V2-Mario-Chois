@@ -1,4 +1,36 @@
-.navigator_bar {
+@import './fonts';
+
+body {
+    margin: 0px;
+}
+.main_container {
     display: flex;
     flex-direction: column;
+}
+
+.header_bar {
+    display: flex;
+    flex-direction: row;
+    height: 52px;
+    background-color: #121212;
+}
+.header_title {
+    color: white;
+    @include customFont(sf-pro-display-regular, 17px);
+    line-height: 20px;
+    letter-spacing: 0.08em;
+    text-align: left;
+    height: 20px;
+    margin: 16px 0px 16px 33px;
+    padding: 0px;
+}
+.router_container {
+    display: flex;
+    flex-direction: row;
+    width: 350px;
+}
+.navigation_bar {
+    display: flex;
+    flex-direction: column;
+    width: 349px;
 }
