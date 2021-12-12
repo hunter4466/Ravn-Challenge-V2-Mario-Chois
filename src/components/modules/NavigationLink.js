@@ -2,16 +2,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
+import doveArrow from '../../assets/images/dove_arrow.svg';
 
 const NavigationLink = ({
   nodeid, name, species, homeworld,
 }) => (
-  <NavLink key={nodeid} activeClassName="selected_nav_item" className="nav_item" to={`/${nodeid}`}>
-    {name}
-    {' '}
-    {species}
-    {' from '}
-    {homeworld}
+  <NavLink key={nodeid} activeClassName="navigation_link_wrapper_active" className="navigation_link_wrapper" to={`/${nodeid}`}>
+    <div className="left_side">
+      <h1 className="navLink_name">{name}</h1>
+      <h2 className="navLink_bio">
+        {species}
+        {' from '}
+        {homeworld}
+      </h2>
+    </div>
+    <img className="right_arrow" src={doveArrow} alt="Arrow" />
+    <div className="draw_underline" />
   </NavLink>
 );
 

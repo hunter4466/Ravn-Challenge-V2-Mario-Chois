@@ -28,7 +28,7 @@
     "redux-logger": "^3.0.6",
     "web-vitals": "^1.0.1"
   },
-  "proxy": "http://localhost:3001",
+  "proxy": "http://localhost:3000",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

@@ -9,7 +9,7 @@ import {
 import NavigationLink from './modules/NavigationLink';
 import NavigationView from './modules/NavigationView';
 
-const NavBar = () => {
+const Navigator = () => {
   const LOAD_DATA = gql`
   query allPeople($first: Int, $after: String) {
     allPeople (first: $first, after: $after) {
@@ -20,6 +20,17 @@ const NavBar = () => {
           name
           species {name}
           homeworld {name}
+          eyeColor
+          hairColor
+          skinColor
+          birthYear
+          vehicleConnection {
+            vehicles {
+              name
+              id
+            }
+          }
+          
         }
       }
       pageInfo {
@@ -54,6 +65,7 @@ const NavBar = () => {
     <Router>
       <div className="router_container">
         <div className="navigation_bar">
+          <span className="stone">.</span>
           {loading && !data ? <p>Loading...</p>
             : (data.allPeople.edges.map(({ node }) => (
               <NavigationLink
@@ -64,6 +76,8 @@ const NavBar = () => {
                 homeworld={node.homeworld.name}
               />
             )))}
+          {' '}
+          |
           {loading ? <p>Loading...</p> : null}
           {error ? <p>Ups... Something went wrong when trying to pull the data</p> : null}
         </div>
@@ -73,9 +87,11 @@ const NavBar = () => {
               <NavigationView
                 key={node.id}
                 nodeid={node.id}
-                name={node.name}
-                species={node.species ? node.species.name : 'Human'}
-                homeworld={node.homeworld.name}
+                eyeColor={node.eyeColor}
+                hairColor={node.hairColor}
+                skinColor={node.skinColor}
+                birthYear={node.birthYear}
+                vehicles={node.vehicleConnection.vehicles}
               />
             </Route>
           ))}
@@ -85,4 +101,4 @@ const NavBar = () => {
   ) : false);
 };
 
-export default NavBar;
+export default Navigator;
