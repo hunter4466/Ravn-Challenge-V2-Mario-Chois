@@ -55,8 +55,11 @@ body {
 .loading_tag_wrapper {
     display: flex;
     flex-direction: row;
+    width: 100%;
+    justify-content: center;
 }
 .load_icon {
+    margin-top: 6px;
     animation: rotateIcon 3s linear infinite;
 }
 @keyframes rotateIcon {
@@ -68,5 +71,8 @@ body {
     }
 }
 .load_text {
-
+    margin-top: 18px;
+    margin-left: 10px;
+    color:#828282;
+    @include customFont(sf-pro-display-regular, 17px);
 }

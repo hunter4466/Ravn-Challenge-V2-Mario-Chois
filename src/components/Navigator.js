@@ -70,13 +70,18 @@ const Navigator = () => {
     }
     return sStr.name;
   };
-  if (error) return <div className="error_wrap"><h1 className="error_tag">Failed to load data</h1></div>;
+  if (error) return <div className="error_wrap"><h2 className="error_tag">Failed to load data</h2></div>;
   return (data ? (
     <Router>
       <div className="router_container">
         <div className="navigation_bar">
           <span className="stone">.</span>
-          {loading && !data ? <p>Loading...</p>
+          {loading && !data ? (
+            <div className="loading_tag_wrapper">
+              <img className="load_icon" src={loadIcon} alt="load_icon" />
+              <h2 className="load_text">Loading</h2>
+            </div>
+          )
             : (data.allPeople.edges.map(({ node }) => (
               <NavigationLink
                 key={node.id}
@@ -87,10 +92,12 @@ const Navigator = () => {
               />
             )))}
           {' '}
-          <div className="loading_tag_wrapper">
-            <img className="load_icon" src={loadIcon} alt="load_icon" />
-            <p className="load_text">Loading</p>
-          </div>
+          {loading ? (
+            <div className="loading_tag_wrapper">
+              <img className="load_icon" src={loadIcon} alt="load_icon" />
+              <h2 className="load_text">Loading</h2>
+            </div>
+          ) : null}
         </div>
         <Switch className="view_area">
           {data.allPeople.edges.map(({ node }) => (

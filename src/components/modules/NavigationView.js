@@ -18,7 +18,7 @@ const NavigationView = ({
       <div className="view_main_containter">
         <div className="view_container">
           <div className="view_title_wrapper">
-            <h1 className="view_title">General Information</h1>
+            <h2 className="view_title">General Information</h2>
           </div>
           <div className="view_element">
             <h2 className="view_element_indicator">Eye Color</h2>
@@ -37,7 +37,7 @@ const NavigationView = ({
             <h2 className="view_element_data">{parser(birthYear)}</h2>
           </div>
           <div className="view_title_wrapper">
-            <h1 className="view_title">Vehicles</h1>
+            <h2 className="view_title">Vehicles</h2>
           </div>
           {vehicles.length > 0 ? (vehicles.map(({ name, id }) => (
             <div key={id} className="view_element">
@@ -60,7 +60,7 @@ NavigationView.propTypes = {
   hairColor: PropTypes.string.isRequired,
   skinColor: PropTypes.string.isRequired,
   birthYear: PropTypes.string.isRequired,
-  vehicles: PropTypes.arrayOf(PropTypes.string).isRequired,
+  vehicles: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default NavigationView;

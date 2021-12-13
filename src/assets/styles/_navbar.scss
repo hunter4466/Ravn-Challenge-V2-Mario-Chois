@@ -60,11 +60,13 @@
     @include customFont(sf-pro-display-regular, 17px);
     color: #333333;
     margin: 0px;
+    letter-spacing: 0.05rem;
 }
 .navLink_bio {
     @include customFont(sf-pro-display-light, 14px);
     color: #828282;
     margin: 0px;
+    letter-spacing: 0.05rem;
 }
 .right_arrow {
     position: absolute;

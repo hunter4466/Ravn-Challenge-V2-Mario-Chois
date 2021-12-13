@@ -6,7 +6,8 @@ The application shows a list of several characters fetched from a graphql API (w
 ## Screenshots
 
 ![image](./src/assets/images/screenshots/Capture1.png)
-
+![image](./src/assets/images/screenshots/Capture2.png)
+![image](./src/assets/images/screenshots/Capture3.png)
 
 ## Built With
 
@@ -41,15 +42,22 @@ The application shows a list of several characters fetched from a graphql API (w
 
 1. Clone the repo
 
-   git clone https://github.com/hunter4466/Recipe_app.git
-  
+   git clone https://github.com/hunter4466/Ravn-Challenge-V2-Mario-Chois.git
+
+2. Open your favorite code editor
+
+   cd ...~/Ravn-Challenge-V2-Mario-Chois
+
 
 ### Usage
 
-1. Install ruby gems dependencies
+1. Install recomended node version (Use NVM)
 
    ```sh
-   bundle install
+   nvm instal 14.16.0
+   ```
+   ```sh
+   nvm use 14.16.0
    ```
 
 2. Install node dependencies
@@ -58,30 +66,22 @@ The application shows a list of several characters fetched from a graphql API (w
    npm install
    ```
 
-3. Set up database
+3. Run the web server
 
    ```sh
-   rails db:create db:migrate db:seed
+   npm run start
    ```
 
-4. Run the web server
+4. Open your web browser on:
 
    ```sh
-   rails server
+   http://localhost:3000
    ```
 
-5. Access to the website in a browser with the following link
+### Assumptions
 
-   ```sh
-   localhost:3000
-   ``
-### Test
-
-For testing the classes run:
-
-   ```sh
-   bundle exec rspec spec
-   ```
+- Added a subtle scrollbar to let the users know there are more items shown below,
+followed the design pattern to mantain same style concept.
 
 ## Author
 
