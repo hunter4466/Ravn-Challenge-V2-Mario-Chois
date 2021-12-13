@@ -3,9 +3,11 @@
 .navigation_bar {
     display: flex;
     flex-direction: column;
-    width: 350px;
+    width: 25%;
     overflow-y: scroll;
     overflow-x: hidden;
+    min-width: 350px;
+    max-width: 350px;
     height: 100vh;
     margin-top: -53px;
     &::-webkit-scrollbar {
@@ -34,11 +36,11 @@
     display: flex;
     flex-direction: row;
     text-decoration: none;
-    width: 350px;
+    width: 100%;
     height: 69px;
-    transition: ease-in-out 0.2s;
+    transition: ease-in-out 0.1s;
     &:hover {
-      background-color: rgba(0, 0, 0, 0.03);
+      background-color: rgba(0, 0, 0, 0.01);
     }
 }
 .navigation_link_wrapper_active {
@@ -46,7 +48,7 @@
     display: flex;
     flex-direction: row;
     text-decoration: none;
-    width: 350px;
+    width: 100%;
     height: 69px;
     background-color: rgba(0, 0, 0, 0.03);
 }
@@ -76,4 +78,7 @@
     bottom: 0px;
     right: 0px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.loading_tag {
+    position: relative;
 }

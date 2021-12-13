@@ -27,8 +27,46 @@ body {
     padding: 0px;
 }
 .router_container {
+    position: relative;
     display: flex;
     flex-direction: row;
+    align-items: stretch;
     width: 100%;
     height: 100%;
+}
+.error_tag {
+    width: 100%;
+    text-align: center;
+    line-height: 20px;
+    letter-spacing: 0.05em;
+    @include customFont(sf-pro-display-regular, 17px);
+    color: #EC5757;
+    margin: 0px;
+}
+.error_wrap {
+    position: relative;
+    width: 349px;
+    height: 100vh;
+    padding-top: 16px;
+    border-right-style: solid;
+    border-right-color: rgba(0, 0, 0, 0.15);
+    border-right-width: 1px;
+}
+.loading_tag_wrapper {
+    display: flex;
+    flex-direction: row;
+}
+.load_icon {
+    animation: rotateIcon 3s linear infinite;
+}
+@keyframes rotateIcon {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.load_text {
+
 }

@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
-import doveArrow from '../../assets/images/dove_arrow.svg';
+import doveArrow from '../../assets/images/icons/dove_arrow.svg';
 
 const NavigationLink = ({
   nodeid, name, species, homeworld,

@@ -1,14 +1,14 @@
 @import './fonts';
-//   sf-pro-display-regular
-//   sf-pro-display-light
+
 .view_main_containter {
-    margin-left: 5%;
+    position: relative;
     margin-top: 0px;
-    margin-right: 5%;
-    width: 100%;
+    width: 75%;
+    padding-left: 117px;
+    padding-right: 117px;
 }
 .view_container {
-    width: 100%;
+    width: 100%
 }
 .view_title_wrapper {
     width: 100%;
@@ -40,7 +40,7 @@
 .view_element_no_vehicles {
     @include customFont(sf-pro-display-regular, 17px);
     letter-spacing: 0.05rem;
-    color:rgba(255, 0, 0, 0.659);
+    color:#EC5757;
     width: fit-content;
 }
 .view_element_data {

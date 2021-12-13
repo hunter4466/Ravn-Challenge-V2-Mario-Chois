@@ -36,8 +36,6 @@ const NavigationView = ({
             <h2 className="view_element_indicator">Birth Year</h2>
             <h2 className="view_element_data">{parser(birthYear)}</h2>
           </div>
-        </div>
-        <div className="view_container">
           <div className="view_title_wrapper">
             <h1 className="view_title">Vehicles</h1>
           </div>

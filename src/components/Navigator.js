@@ -8,6 +8,7 @@ import {
 } from 'react-router-dom';
 import NavigationLink from './modules/NavigationLink';
 import NavigationView from './modules/NavigationView';
+import loadIcon from '../assets/images/icons/loading_icon.svg';
 
 const Navigator = () => {
   const LOAD_DATA = gql`
@@ -60,7 +61,16 @@ const Navigator = () => {
       }
     }
   });
-  if (error) return <p>Page could not be loaded</p>;
+  const speciesParser = (fStr, sStr) => {
+    if (/\d/.test(fStr) && !sStr) {
+      return 'Droid';
+    }
+    if (!sStr) {
+      return 'Human';
+    }
+    return sStr.name;
+  };
+  if (error) return <div className="error_wrap"><h1 className="error_tag">Failed to load data</h1></div>;
   return (data ? (
     <Router>
       <div className="router_container">
@@ -72,14 +82,15 @@ const Navigator = () => {
                 key={node.id}
                 nodeid={node.id}
                 name={node.name}
-                species={node.species ? node.species.name : 'Human'}
+                species={speciesParser(node.name, node.species)}
                 homeworld={node.homeworld.name}
               />
             )))}
           {' '}
-          |
-          {loading ? <p>Loading...</p> : null}
-          {error ? <p>Ups... Something went wrong when trying to pull the data</p> : null}
+          <div className="loading_tag_wrapper">
+            <img className="load_icon" src={loadIcon} alt="load_icon" />
+            <p className="load_text">Loading</p>
+          </div>
         </div>
         <Switch className="view_area">
           {data.allPeople.edges.map(({ node }) => (
