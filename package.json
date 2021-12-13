@@ -23,7 +23,6 @@
     "react-test-renderer": "^17.0.2",
     "web-vitals": "^1.0.1"
   },
-  "proxy": "http://localhost:3000",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

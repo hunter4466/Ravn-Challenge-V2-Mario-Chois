@@ -2,7 +2,12 @@
 
 This project has been developed for challenge purposes, the app consists in one view with three components: Header, Navigation bar, and dynamic view.
 The application shows a list of several characters fetched from a graphql API (with Star Wars Theme), and shows detailed information about the clicked character in view.
+
+
 ## Live Preview
+
+- [Live Preview Link](https://ravn-challenge-mario-chois.herokuapp.com/)
+
 ## Screenshots
 
 ![image](./src/assets/images/screenshots/Capture1.png)
