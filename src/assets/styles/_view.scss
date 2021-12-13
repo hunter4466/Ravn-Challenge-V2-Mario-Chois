@@ -1,0 +1,51 @@
+@import './fonts';
+
+.view_main_containter {
+    position: relative;
+    margin-top: 0px;
+    width: 75%;
+    padding-left: 117px;
+    padding-right: 117px;
+}
+.view_container {
+    width: 100%
+}
+.view_title_wrapper {
+    width: 100%;
+    height: 25px;
+    padding-top: 35px;
+}
+.view_title{
+    @include customFont(sf-pro-display-regular, 17px);
+    letter-spacing: 0.05rem;
+    color:#333333;
+    margin: 0px;
+}
+.view_element {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 49px;
+    border-bottom-style: solid;
+    border-bottom-color: rgba(0, 0, 0, 0.1);
+    border-bottom-width: 1px;
+}
+.view_element_indicator {
+    @include customFont(sf-pro-display-regular, 17px);
+    letter-spacing: 0.05rem;
+    color:#828282;
+    width: fit-content;
+}
+.view_element_no_vehicles {
+    @include customFont(sf-pro-display-regular, 17px);
+    letter-spacing: 0.05rem;
+    color:#EC5757;
+    width: fit-content;
+}
+.view_element_data {
+    @include customFont(sf-pro-display-regular, 17px);
+    letter-spacing: 0.05rem;
+    color:#333333;
+    width: fit-content;
+}

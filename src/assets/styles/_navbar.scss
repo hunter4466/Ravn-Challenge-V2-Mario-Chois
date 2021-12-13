@@ -1,0 +1,86 @@
+@import './fonts';
+
+.navigation_bar {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    min-width: 350px;
+    max-width: 350px;
+    height: 100vh;
+    margin-top: -53px;
+    &::-webkit-scrollbar {
+        width: 3px;
+    }
+    &::-webkit-scrollbar-track {
+        width: 50px;
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+    &::-webkit-scrollbar-thumb {
+        width: 50px;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        border-style: none;
+    }
+}
+.stone {
+    height: 53px;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.1);
+    font-size: 45px;
+}
+
+.navigation_link_wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    width: 100%;
+    height: 69px;
+    transition: ease-in-out 0.1s;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.01);
+    }
+}
+.navigation_link_wrapper_active {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    width: 100%;
+    height: 69px;
+    background-color: rgba(0, 0, 0, 0.03);
+}
+.left_side {
+  margin: 16px 0px 16px 14.93px ;
+  height: 35px;
+}
+.navLink_name {
+    @include customFont(sf-pro-display-regular, 17px);
+    color: #333333;
+    margin: 0px;
+    letter-spacing: 0.05rem;
+}
+.navLink_bio {
+    @include customFont(sf-pro-display-light, 14px);
+    color: #828282;
+    margin: 0px;
+    letter-spacing: 0.05rem;
+}
+.right_arrow {
+    position: absolute;
+    top: 30px;
+    right: 24px;
+}
+.draw_underline {
+    position: absolute;
+    width: 334px;
+    height:1px;
+    bottom: 0px;
+    right: 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.loading_tag {
+    position: relative;
+}

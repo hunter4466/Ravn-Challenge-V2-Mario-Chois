@@ -1,0 +1,16 @@
+
+@font-face {
+  font-family: 'sf-pro-display-regular';
+  src: url('../fonts/SFPRODISPLAYREGULAR.ttf');
+}
+
+@font-face {
+    font-family: 'sf-pro-display-light';
+    src: url('../fonts/SFPPRODISPLAYLIGHT.ttf');
+}
+
+@mixin customFont ($font, $fontsize) {
+    font-family: $font;
+    font-size: $fontsize;
+  }
+  
